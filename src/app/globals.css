@@ -1,26 +1,49 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import "@heroui/styles";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* MOBI brand overrides on top of the HeroUI default theme */
+@layer base {
+  :root,
+  [data-theme="light"] {
+    --accent: oklch(0.575 0.22 25.5);
+    --accent-foreground: oklch(0.99 0 0);
+    --focus: var(--accent);
+  }
+
+  .dark,
+  [data-theme="dark"] {
+    --background: oklch(0.1 0 0);
+    --surface: oklch(0.145 0 0);
+    --surface-secondary: oklch(0.185 0 0);
+    --surface-tertiary: oklch(0.225 0 0);
+    --overlay: oklch(0.16 0 0);
+
+    --accent: oklch(0.605 0.215 25.5);
+    --accent-foreground: oklch(0.99 0 0);
+    --focus: var(--accent);
+
+    --border: oklch(0.26 0 0);
+    --separator: oklch(0.22 0 0);
+
+    --accent-soft: color-mix(in oklab, var(--accent) 16%, transparent);
+    --accent-soft-foreground: color-mix(in oklab, var(--accent) 55%, var(--foreground) 45%);
+    --accent-soft-hover: color-mix(in oklab, var(--accent) 22%, transparent);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  scrollbar-width: none;
 }
