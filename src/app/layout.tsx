@@ -41,7 +41,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <footer className="border-t border-separator py-6">
             <div className="mx-auto max-w-[1400px] px-6 text-center text-xs text-muted">
-              MOBI Business Applications Demo Portal — built with Next.js and HeroUI
+              MOBIZ | Business Applications Demo Portal — built with Next.js and HeroUI
             </div>
           </footer>
         </Providers>
