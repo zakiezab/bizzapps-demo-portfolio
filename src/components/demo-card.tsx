@@ -67,7 +67,7 @@ export function DemoCard({ demo }: { demo: Demo }) {
         </Card.Content>
 
         <Card.Footer className="flex items-center justify-between border-t border-separator px-5 py-3 text-sm font-medium text-accent">
-          View demo
+          View details
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
         </Card.Footer>
       </Card>

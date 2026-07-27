@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "MOBI | Business Applications Demo Portal",
-    template: "%s | MOBI Demo Portal",
+    default: "MOBIZ | Business Applications Demo Portal",
+    template: "%s | MOBIZ Demo Portal",
   },
   description:
     "Browse Dynamics 365 Finance & Operations and CRM/Power Platform demo applications across industries.",
